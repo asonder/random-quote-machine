@@ -1,0 +1,25 @@
+Got it.
+You’re attempting to access via HTTPS. If you use HTTP, it works fine.
+However, because you’re using GitHub, which is HTTPS, you’ll get cross-origin errors.
+Try using Crossorigin.me
+For example, https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=showQuote&lang=en&key=10153
+
+data-jsonp.js:7 Mixed Content: The page at 'https://asonder.github.io/random-quote-machine/' was loaded over HTTPS, but requested an insecure script 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=showQuote&lang=en&key=49152&callback=?'.
+This request has been blocked; the content must be served over HTTPS.
+
+
+
+after the dom is loaded,
+a script element is created that makes
+a jsonp ajax request
+
+
+the same occurs when you press the "new quote"
+button
+
+
+
+could i just make the ajax call instead of
+adding the script element?
+
+don't use the jsonp url variable
