@@ -4,7 +4,7 @@ $(document).ready(function startGenerator() {
 
   function getQuote() {
     var quoteKey = Math.floor((Math.random() * 100000) + 1);
-    var url = 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&key=' + quoteKey + '&jsonp=?';
+    var url = 'https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&key=' + quoteKey + '&jsonp=?';
     $.getJSON(url).done(function(data) {
       var encoded, quoteText, quoteAuthor;
       //encoded, icon;
